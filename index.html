@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Taynara Fernandes — Cirurgiã Dentista | Guarulhos, SP</title>
+  <meta name="description" content="Dra. Taynara Fernandes, Cirurgiã Dentista especialista em Reabilitação Oral e Dentística em Guarulhos - SP. Clareamento, Implante, Botox, Ortodontia, Prótese e mais.">
+  <meta name="keywords" content="dentista guarulhos, cirurgiã dentista, clareamento dental, implante, botox dental, ortodontia guarulhos, prótese dentária, reabilitação oral">
+  <meta name="author" content="Dra. Taynara Fernandes">
+  <meta property="og:title" content="Dra. Taynara Fernandes — Cirurgiã Dentista">
+  <meta property="og:description" content="Especialista em Reabilitação Oral e Dentística em Guarulhos - SP.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:       #1a2744;
+      --navy-dk:    #0f1a30;
+      --navy-md:    #22336a;
+      --gold:       #c9a84c;
+      --gold-lt:    #e8d5a3;
+      --gold-dk:    #a67c38;
+      --gold-pale:  #f7f0e0;
+      --cream:      #faf8f4;
+      --white:      #ffffff;
+      --body:       #4a4a62;
+      --border:     #ece8df;
+      --r:          18px;
+      --r-lg:       28px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--navy); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ── Animations ─────────────────────────────────────────── */
+    .fade-up   { opacity: 0; transform: translateY(40px); transition: opacity .75s ease, transform .75s ease; }
+    .fade-left { opacity: 0; transform: translateX(-40px); transition: opacity .75s ease, transform .75s ease; }
+    .fade-right{ opacity: 0; transform: translateX(40px); transition: opacity .75s ease, transform .75s ease; }
+    .fade-up.in, .fade-left.in, .fade-right.in { opacity: 1; transform: none; }
+    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+    .d4{transition-delay:.4s} .d5{transition-delay:.5s} .d6{transition-delay:.6s}
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+    .section    { padding: 100px 0; }
+    .serif      { font-family: 'Cormorant Garamond', Georgia, serif; }
+    h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 700; line-height: 1.12; color: var(--navy); }
+    h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; font-weight: 700; }
+    .eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 14px; }
+    .rule { width: 48px; height: 1.5px; background: linear-gradient(90deg, var(--gold), var(--gold-lt)); border-radius: 2px; margin-bottom: 24px; }
+
+    /* ── Buttons ─────────────────────────────────────────────── */
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 30px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: .82rem; letter-spacing: .04em; cursor: pointer; border: none; transition: all .25s ease; white-space: nowrap; }
+    .btn-gold { background: var(--gold); color: var(--navy-dk); }
+    .btn-gold:hover { background: var(--gold-dk); color: var(--white); transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,168,76,.32); }
+    .btn-ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.35); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+    .btn-dark  { background: var(--navy); color: var(--white); }
+    .btn-dark:hover { background: var(--navy-md); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(26,39,68,.3); }
+    .btn svg   { flex-shrink: 0; }
+
+    /* ─────────────────────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────────────────────── */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+      padding: 22px 0; transition: all .3s ease;
+    }
+    #nav.scrolled {
+      background: rgba(15,26,48,.96); backdrop-filter: blur(18px);
+      padding: 14px 0; box-shadow: 0 4px 40px rgba(0,0,0,.28);
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; flex-direction: column; }
+    .nav-logo .n1 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: var(--white); letter-spacing: .02em; line-height: 1; }
+    .nav-logo .n2 { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-top: 2px; }
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a { font-size: .74rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: rgba(255,255,255,.68); transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .ham { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+    .ham span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all .3s; }
+
+    /* Mobile overlay */
+    .mob { display: none; position: fixed; inset: 0; background: var(--navy-dk); z-index: 950; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mob.open { display: flex; }
+    .mob a { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--white); transition: color .2s; }
+    .mob a:hover { color: var(--gold); }
+    .mob-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: var(--white); font-size: 2.2rem; line-height: 1; cursor: pointer; }
+
+    /* ─────────────────────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh; display: grid; grid-template-columns: 55% 45%;
+      background: linear-gradient(135deg, var(--navy-dk) 0%, var(--navy) 100%);
+      position: relative; overflow: hidden;
+    }
+    .hero-dots {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .hero-glow {
+      position: absolute; top: 0; left: 0; width: 70%; height: 100%;
+      background: radial-gradient(ellipse at 20% 60%, rgba(201,168,76,.07) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 140px 64px 80px 0; padding-left: 0;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 18px; border-radius: 50px; margin-bottom: 32px;
+      background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.25);
+      font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-lt); width: fit-content;
+    }
+    .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .hero-h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem,5.5vw,5rem); font-weight: 700; line-height: 1.06; color: var(--white); margin-bottom: 24px; }
+    .hero-h1 em { font-style: italic; color: var(--gold); }
+    .hero-sub { font-size: .95rem; color: rgba(255,255,255,.62); max-width: 400px; line-height: 1.78; margin-bottom: 40px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* Hero photo */
+    .hero-photo {
+      position: relative; overflow: hidden;
+      display: flex; align-items: stretch;
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .hero-photo::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(to right, var(--navy-dk) 0%, transparent 20%),
+                  linear-gradient(to top, rgba(15,26,48,.4) 0%, transparent 40%);
+    }
+
+    /* ─────────────────────────────────────────────────────────
+       SOBRE
+    ───────────────────────────────────────────────────────── */
+    #sobre { background: var(--white); overflow: hidden; }
+    .sobre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .sobre-img-wrap { position: relative; }
+    .sobre-img {
+      aspect-ratio: 4/5; border-radius: var(--r-lg); overflow: hidden;
+      box-shadow: 0 32px 80px rgba(26,39,68,.16);
+    }
+    .sobre-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .sobre-text { font-size: .88rem; color: #2d2d2d; line-height: 1.85; margin-bottom: 18px; }
+    .sobre-text * { color: #2d2d2d !important; }
+
+    /* ─────────────────────────────────────────────────────────
+       SERVIÇOS
+    ───────────────────────────────────────────────────────── */
+    #servicos { background: var(--cream); }
+    .sec-header { text-align: center; margin-bottom: 72px; }
+    .sec-header .rule { margin: 0 auto 24px; }
+    .sec-header p { font-size: .88rem; color: var(--body); max-width: 480px; margin: 14px auto 0; }
+    .servicos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .servico-card {
+      background: var(--white); border-radius: var(--r-lg); padding: 32px 24px 28px;
+      border: 1px solid var(--border); cursor: default;
+      transition: all .3s ease; position: relative; overflow: hidden;
+    }
+    .servico-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+      transform: scaleX(0); transition: transform .3s ease; transform-origin: left;
+    }
+    .servico-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(26,39,68,.1); border-color: rgba(201,168,76,.25); }
+    .servico-card:hover::after { transform: scaleX(1); }
+
+    /* Icon — Instagram-highlight style */
+    .svc-icon {
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 20px rgba(26,39,68,.2);
+    }
+    .svc-icon svg { width: 26px; height: 26px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+    .servico-card h3 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 700; }
+    .servico-card p  { font-size: .78rem; color: var(--body); line-height: 1.72; }
+
+    /* ─────────────────────────────────────────────────────────
+       RESULTADOS
+    ───────────────────────────────────────────────────────── */
+    #resultados {
+      background: linear-gradient(150deg, var(--navy-dk) 0%, var(--navy) 100%);
+      position: relative; overflow: hidden;
+    }
+    #resultados::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,.06) 0%, transparent 55%);
+    }
+    .res-header { text-align: center; margin-bottom: 64px; }
+    .res-header h2 { color: var(--white); }
+    .res-header p  { font-size: .88rem; color: rgba(255,255,255,.5); max-width: 440px; margin: 14px auto 0; }
+    .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .res-card { border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(201,168,76,.12); background: rgba(255,255,255,.04); transition: all .35s ease; }
+    .res-card:hover { transform: translateY(-6px); border-color: rgba(201,168,76,.35); box-shadow: 0 24px 60px rgba(0,0,0,.3); }
+    .res-photo { position: relative; height: 300px; overflow: hidden; }
+    .res-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .res-card:hover .res-photo img { transform: scale(1.04); }
+    .res-labels {
+      position: absolute; top: 0; left: 0; right: 0;
+      display: flex; justify-content: space-between;
+      padding: 14px 16px;
+    }
+    .res-tag {
+      padding: 5px 12px; border-radius: 50px; font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      backdrop-filter: blur(8px);
+    }
+    .res-tag.antes  { background: rgba(0,0,0,.55); color: rgba(255,255,255,.75); }
+    .res-tag.depois { background: rgba(201,168,76,.85); color: var(--navy-dk); }
+    .res-info { padding: 20px 22px 22px; }
+    .res-info h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .res-info p  { font-size: .73rem; color: var(--gold); font-weight: 600; }
+    .res-cta { text-align: center; margin-top: 52px; }
+
+    /* ─────────────────────────────────────────────────────────
+       DEPOIMENTOS
+    ───────────────────────────────────────────────────────── */
+    #depoimentos { background: var(--white); }
+    .depo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .depo-card { background: var(--cream); border-radius: var(--r-lg); padding: 36px; border: 1px solid var(--border); transition: all .3s; position: relative; }
+    .depo-card:hover { background: var(--white); box-shadow: 0 20px 56px rgba(26,39,68,.09); transform: translateY(-4px); border-color: rgba(201,168,76,.2); }
+    .depo-q {
+      font-family: 'Cormorant Garamond', serif; font-size: 5.5rem; font-weight: 700; line-height: .8;
+      color: var(--gold-pale); position: absolute; top: 20px; left: 28px; user-select: none;
+    }
+    .depo-stars { display: flex; gap: 2px; margin-bottom: 18px; color: var(--gold); font-size: .85rem; }
+    .depo-text  { font-size: .86rem; color: var(--body); line-height: 1.82; font-style: italic; margin-bottom: 26px; position: relative; z-index: 1; }
+    .depo-author { display: flex; align-items: center; gap: 13px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,.06); }
+    .depo-av { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--gold); }
+    .depo-av img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .depo-name { font-weight: 700; font-size: .8rem; color: var(--navy); }
+    .depo-role { font-size: .7rem; color: #999; margin-top: 1px; }
+
+    /* ─────────────────────────────────────────────────────────
+       CTA FINAL
+    ───────────────────────────────────────────────────────── */
+    #cta {
+      position: relative; overflow: hidden; padding: 140px 0;
+      background: linear-gradient(150deg, var(--navy-dk) 0%, var(--navy-md) 100%);
+      text-align: center;
+    }
+    #cta::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,.08) 0%, transparent 60%);
+    }
+    #cta .container { position: relative; z-index: 1; }
+    #cta .eyebrow { color: var(--gold-lt); margin-bottom: 24px; }
+    #cta h2 { color: var(--white); margin-bottom: 24px; }
+    #cta p  { font-size: .94rem; color: rgba(255,255,255,.56); max-width: 460px; margin: 0 auto 28px; line-height: 1.78; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 12px; margin-bottom: 12px; }
+    .cta-note { margin-top: 24px; font-size: .72rem; color: rgba(255,255,255,.28); }
+
+    /* ─────────────────────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────────────────────── */
+    footer { background: var(--navy-dk); border-top: 1px solid rgba(201,168,76,.1); padding: 56px 0 32px; }
+    .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 52px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.06); margin-bottom: 32px; }
+    .foot-logo .l1 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); }
+    .foot-logo .l2 { font-size: .6rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-top: 2px; margin-bottom: 16px; }
+    .foot-logo p   { font-size: .78rem; color: #ffffff; line-height: 1.7; max-width: 250px; }
+    .foot-brand > p { font-size: .79rem; font-weight: 600; color: #e8e8e8; line-height: 1.7; max-width: 250px; }
+    .foot-social   { display: flex; gap: 10px; margin-top: 20px; }
+    .soc { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #ffffff; display: flex; align-items: center; justify-content: center; color: #ffffff; transition: all .2s; cursor: pointer; }
+    .soc:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,.08); }
+    .soc svg { width: 15px; height: 15px; fill: currentColor; }
+    .foot-h { font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .foot-links { display: flex; flex-direction: column; gap: 11px; }
+    .foot-links a { font-size: .79rem; color: #e8e8e8; transition: color .2s; }
+    .foot-links a:hover { color: var(--gold); }
+    .foot-links span { font-size: .79rem; color: #e8e8e8; }
+    .foot-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .foot-bottom p { font-size: .7rem; color: #cccccc; }
+    .foot-bottom span { color: var(--gold); }
+
+    /* ─────────────────────────────────────────────────────────
+       FLOAT WA
+    ───────────────────────────────────────────────────────── */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 990; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-bubble { background: var(--white); border-radius: 14px; padding: 11px 18px; font-size: .78rem; font-weight: 600; color: var(--navy); box-shadow: 0 8px 32px rgba(0,0,0,.14); white-space: nowrap; display: none; pointer-events: none; }
+    .wa-bubble.show { display: block; animation: popIn .3s ease; }
+    @keyframes popIn { from{opacity:0;transform:translateX(10px)} to{opacity:1;transform:none} }
+    .wa-btn { width: 58px; height: 58px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 28px rgba(37,211,102,.38); transition: all .25s; position: relative; text-decoration: none; }
+    .wa-btn:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 16px 40px rgba(37,211,102,.48); }
+    .wa-btn svg { width: 28px; height: 28px; fill: var(--white); }
+    .wa-ping { position: absolute; top: 0; right: 0; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 2px solid var(--white); animation: ping 2.2s infinite; }
+    @keyframes ping { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:.6} }
+
+    /* ─────────────────────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-photo { min-height: 50vh; order: -1; }
+      .hero-float { display: none; }
+      .hero-content { padding: 100px 0 60px; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 52px; }
+      .sobre-img-wrap { max-width: 380px; margin: 0 auto; }
+      .res-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+      .depo-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
+      .foot-grid { grid-template-columns: 1fr; gap: 36px; }
+      .foot-bottom { flex-direction: column; text-align: center; }
+      .nav-links, .nav-cta .btn { display: none; }
+      .ham { display: flex; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 72px 0; }
+      .container { padding: 0 20px; }
+      .hero-btns { flex-direction: column; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      #cta { padding: 100px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<header id="nav" role="banner">
+  <div class="container nav-wrap">
+    <a href="#hero" class="nav-logo">
+      <span class="n1">Dra. Taynara Fernandes</span>
+      <span class="n2">Cirurgiã Dentista · CRO-SP</span>
+    </a>
+    <nav class="nav-links" aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#cta">Contato</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/5511981454342" class="btn btn-gold">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Agendar
+      </a>
+      <button class="ham" id="ham" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mob" id="mob" role="dialog" aria-label="Menu mobile">
+  <button class="mob-close" id="mob-close" aria-label="Fechar">×</button>
+  <a href="#sobre"       class="mob-link">Sobre</a>
+  <a href="#servicos"    class="mob-link">Serviços</a>
+  <a href="#resultados"  class="mob-link">Resultados</a>
+  <a href="#depoimentos" class="mob-link">Depoimentos</a>
+  <a href="https://wa.me/5511981454342" class="btn btn-gold" style="margin-top:8px">Agendar consulta</a>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section id="hero" aria-labelledby="h1">
+  <div class="hero-dots" aria-hidden="true"></div>
+  <div class="hero-glow"  aria-hidden="true"></div>
+
+  <div class="hero-content container" style="grid-column:1;padding-left:max(28px,calc((100vw - 1140px)/2 + 28px))">
+    <div class="hero-badge fade-up"><span aria-hidden="true"></span>Guarulhos · São Paulo</div>
+    <h1 id="h1" class="hero-h1 fade-up d1">
+      O sorriso que<br>você merece,<br><em>finalmente.</em>
+    </h1>
+    <p class="hero-sub fade-up d2">
+      Reabilitação Oral e Dentística com técnica refinada e cuidado personalizado — para você se apaixonar pelo próprio sorriso.
+    </p>
+    <div class="hero-btns fade-up d3">
+      <a href="https://wa.me/5511981454342" class="btn btn-gold">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Agendar no WhatsApp
+      </a>
+      <a href="#resultados" class="btn btn-ghost">Ver resultados</a>
+    </div>
+  </div>
+
+  <div class="hero-photo fade-right" aria-label="Foto profissional da Dra. Taynara Fernandes">
+    <img src="Instagram7_files/572709101_18543309235027168_7532898056820656706_n.jpg"
+         alt="Dra. Taynara Fernandes — ensaio profissional">
+  </div>
+</section>
+
+<!-- ── SOBRE ─────────────────────────────────────────────────────────────── -->
+<section id="sobre" class="section" aria-labelledby="sobre-h">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-img-wrap fade-left">
+        <div class="sobre-img">
+          <img src="Instagram7_files/682139587_18591549751027168_1126744717922003035_n.jpg"
+               alt="Dra. Taynara Fernandes — retrato profissional">
+        </div>
+      </div>
+
+      <div class="fade-right">
+        <span class="eyebrow">Sobre a especialista</span>
+        <div class="rule"></div>
+        <h2 id="sobre-h" style="margin-bottom:24px">
+          Cuidado além da<br><em style="font-style:italic;color:var(--gold)">estética.</em>
+        </h2>
+        <p class="sobre-text">
+          A Dra. Taynara Fernandes é Cirurgiã Dentista especializada em Reabilitação Oral e Dentística, com atuação em Guarulhos - SP. Sua abordagem combina técnica avançada com escuta ativa, garantindo que cada tratamento seja pensado exclusivamente para você.
+        </p>
+        <p class="sobre-text">
+          Com formação sólida e atualização contínua, a Dra. Taynara oferece um atendimento personalizado, acolhedor e focado em resultados que transformam vidas — do preventivo ao estético.
+        </p>
+        <a href="https://wa.me/5511981454342" class="btn btn-dark" style="padding:16px 40px;font-size:.86rem;align-self:flex-start;margin-top:24px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          Fale comigo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVIÇOS ──────────────────────────────────────────────────────────── -->
+<section id="servicos" class="section" aria-labelledby="svc-h">
+  <div class="container">
+    <div class="sec-header fade-up">
+      <span class="eyebrow">Tratamentos</span>
+      <div class="rule"></div>
+      <h2 id="svc-h">O que posso<br>fazer por você</h2>
+      <p>Do clareamento ao implante, técnica refinada e resultado impecável em cada procedimento.</p>
+    </div>
+
+    <div class="servicos-grid">
+
+      <!-- Botox -->
+      <div class="servico-card fade-up d1">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2c0 0-1 3-1 6s1 5 1 5"/><path d="M9 8c-1.5.5-3 2-3 4 0 2.5 2 4 5 5"/><path d="M15 8c1.5.5 3 2 3 4 0 2.5-2 4-5 5"/><path d="M10 17c0 2 .5 3 2 3s2-1 2-3"/><line x1="12" y1="2" x2="12" y2="4"/><circle cx="12" cy="1.5" r="1"/></svg>
+        </div>
+        <h3>Botox Facial</h3>
+        <p>Toxina botulínica para harmonização facial, suavização de linhas de expressão e levantamento do sorriso com resultado natural.</p>
+      </div>
+
+      <!-- Prótese -->
+      <div class="servico-card fade-up d2">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 2.8 1 4L8 19c.3 1.2 1 2 2 2h4c1 0 1.7-.8 2-2l1-8c.5-1.2 1-2.5 1-4C18 4.5 15.5 2 12 2z"/><path d="M9 9h6M9 12h6"/></svg>
+        </div>
+        <h3>Prótese Dentária</h3>
+        <p>Próteses fixas, removíveis ou sobre implante com materiais premium. Estética, função e conforto em perfeita harmonia.</p>
+      </div>
+
+      <!-- Clareamento -->
+      <div class="servico-card fade-up d3">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/><line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/><line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/></svg>
+        </div>
+        <h3>Clareamento</h3>
+        <p>Clareamento profissional com géis de alta performance. Até 8 tons mais claro com segurança e sem sensibilidade excessiva.</p>
+      </div>
+
+      <!-- Ortodontia -->
+      <div class="servico-card fade-up d4">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="7" rx="3.5"/><line x1="7" y1="9" x2="7" y2="16"/><line x1="12" y1="9" x2="12" y2="16"/><line x1="17" y1="9" x2="17" y2="16"/><path d="M7 9C7 7 8 5.5 12 5.5S17 7 17 9"/></svg>
+        </div>
+        <h3>Ortodontia</h3>
+        <p>Aparelhos convencionais ou alinhadores invisíveis para correção do alinhamento dental com estética e eficiência.</p>
+      </div>
+
+      <!-- Consultas -->
+      <div class="servico-card fade-up d1">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9a8.96 8.96 0 01-5.03-1.54L3 21l1.54-3.97A8.96 8.96 0 013 12c0-4.97 4.03-9 9-9s9 4.03 9 9z"/></svg>
+        </div>
+        <h3>Avaliação Gratuita</h3>
+        <p>Diagnóstico bucal completo e plano de tratamento personalizado. O primeiro passo para um sorriso saudável e bonito.</p>
+      </div>
+
+      <!-- Implante -->
+      <div class="servico-card fade-up d2">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v5M12 7c-2.5 0-4 1.5-4 3.5 0 1.5.8 2.5 2 3v8.5h4V13.5c1.2-.5 2-1.5 2-3C16 8.5 14.5 7 12 7z"/><path d="M10 13h4"/><path d="M9 16h6"/><path d="M10 19h4"/></svg>
+        </div>
+        <h3>Implante Dentário</h3>
+        <p>Solução permanente com implantes de titânio de alta biocompatibilidade. Estabilidade, naturalidade e qualidade de vida.</p>
+      </div>
+
+      <!-- Lábios -->
+      <div class="servico-card fade-up d3">
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 6c-4 0-8 2.5-8 5 0 1.5 1.5 2.5 4 3 .5 2.5 2 4 4 4s3.5-1.5 4-4c2.5-.5 4-1.5 4-3 0-2.5-4-5-8-5z"/><path d="M8 11c1.3 1.5 6.7 1.5 8 0"/></svg>
+        </div>
+        <h3>Preenchimento Labial</h3>
+        <p>Harmonização labial com ácido hialurônico para volume, definição e simetria perfeitos. Resultados naturais que realçam sua beleza única.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULTADOS ────────────────────────────────────────────────────────── -->
+<section id="resultados" class="section" aria-labelledby="res-h">
+  <div class="container">
+    <div class="res-header fade-up">
+      <span class="eyebrow" style="color:var(--gold-lt)">Antes &amp; Depois</span>
+      <div class="rule" style="margin:0 auto 24px"></div>
+      <h2 id="res-h">Resultados que<br>falam por si mesmos</h2>
+      <p>Cada transformação é real. Cada sorriso, uma vida mudada.</p>
+    </div>
+
+    <div class="res-grid">
+
+      <article class="res-card fade-up d1">
+        <div class="res-photo">
+          <img src="Instagram7_files/566545294_18539562754027168_7425614979215952432_n.jpg"
+               alt="Antes e depois — Clareamento e Facetas de Porcelana">
+          <div class="res-labels">
+            <span class="res-tag antes">Antes</span>
+            <span class="res-tag depois">Depois</span>
+          </div>
+        </div>
+        <div class="res-info">
+          <h4>Facetas de Porcelana</h4>
+          <p>Sorriso completamente renovado</p>
+        </div>
+      </article>
+
+      <article class="res-card fade-up d2">
+        <div class="res-photo">
+          <img src="Instagram7_files/491441149_18504222793027168_8031403314798611730_n.jpg"
+               alt="Antes e depois — Clareamento e Reabilitação Oral">
+          <div class="res-labels">
+            <span class="res-tag antes">Antes</span>
+            <span class="res-tag depois">Depois</span>
+          </div>
+        </div>
+        <div class="res-info">
+          <h4>Reabilitação Oral</h4>
+          <p>Transformação completa do sorriso</p>
+        </div>
+      </article>
+
+      <article class="res-card fade-up d3">
+        <div class="res-photo">
+          <img src="Instagram7_files/489774998_18502510564027168_3929048348255584930_n.jpg"
+               alt="Antes e depois — Preenchimento Labial">
+          <div class="res-labels">
+            <span class="res-tag antes">Antes</span>
+            <span class="res-tag depois">Depois</span>
+          </div>
+        </div>
+        <div class="res-info">
+          <h4>Preenchimento Labial</h4>
+          <p>Resultado natural e refinado</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="res-cta fade-up">
+      <a href="https://wa.me/5511981454342" class="btn btn-gold" style="padding:16px 40px;font-size:.88rem">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Quero meu resultado
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEPOIMENTOS ───────────────────────────────────────────────────────── -->
+<section id="depoimentos" class="section" aria-labelledby="dep-h">
+  <div class="container">
+    <div class="sec-header fade-up">
+      <span class="eyebrow">Depoimentos</span>
+      <div class="rule"></div>
+      <h2 id="dep-h">O que nossos<br>pacientes dizem</h2>
+    </div>
+    <div class="depo-grid">
+
+      <article class="depo-card fade-up d1">
+        <div class="depo-q" aria-hidden="true">"</div>
+        <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depo-text">"Tinha muito medo de dentista, mas a Dra. Taynara me deixou completamente à vontade. Fiz o clareamento e ficou incrível! Minha autoestima melhorou demais."</p>
+        <div class="depo-author">
+          <div class="depo-av"><img src="download.jpg" alt="Ana Maria S."></div>
+          <div>
+            <p class="depo-name">Ana Maria S.</p>
+            <p class="depo-role">Paciente — Clareamento Dental</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="depo-card fade-up d2">
+        <div class="depo-q" aria-hidden="true">"</div>
+        <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depo-text">"Realizei meu implante e o resultado superou todas as expectativas. Extremamente competente e humana. Não consigo imaginar trocar de dentista."</p>
+        <div class="depo-author">
+          <div class="depo-av"><img src="depoimento3.jpg" alt="Roberto C."></div>
+          <div>
+            <p class="depo-name">Roberto C.</p>
+            <p class="depo-role">Paciente — Implante Dentário</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="depo-card fade-up d3">
+        <div class="depo-q" aria-hidden="true">"</div>
+        <div class="depo-stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="depo-text">"Fiz harmonização facial e preenchimento labial. O resultado ficou absolutamente natural. A Dra. tem um olhar artístico único. Sou paciente fiel há dois anos!"</p>
+        <div class="depo-author">
+          <div class="depo-av"><img src="images.jpg" alt="Juliana F."></div>
+          <div>
+            <p class="depo-name">Juliana F.</p>
+            <p class="depo-role">Paciente — Botox &amp; Lábios</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ─────────────────────────────────────────────────────────── -->
+<section id="cta" aria-labelledby="cta-h">
+  <div class="container">
+    <span class="eyebrow fade-up">Pronta para te atender</span>
+    <div class="rule fade-up d1" style="margin:0 auto 28px"></div>
+    <h2 id="cta-h" class="fade-up d2" style="color:var(--white)">
+      Seu novo sorriso<br>começa com uma<br><em style="font-style:italic;color:var(--gold)">conversa.</em>
+    </h2>
+    <p class="fade-up d3">Agende sua avaliação gratuita e descubra qual tratamento é ideal para você. Atendimento em Guarulhos - SP.</p>
+    <div class="cta-btns fade-up d4">
+      <a href="https://wa.me/5511981454342" class="btn btn-gold" style="padding:17px 44px;font-size:.92rem">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+    </div>
+    <p class="cta-note fade-up d5">📍 Guarulhos · SP &nbsp;·&nbsp; Resposta em até 2h no horário comercial</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo">
+          <p class="l1">Dra. Taynara Fernandes</p>
+          <p class="l2">Cirurgiã Dentista · CRO-SP</p>
+        </div>
+        <p>Reabilitação Oral e Dentística com excelência e cuidado humanizado em Guarulhos - SP.</p>
+        <div class="foot-social" role="list" aria-label="Redes sociais">
+          <a href="#" class="soc" aria-label="Instagram" role="listitem">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/5511981454342" class="soc" aria-label="WhatsApp" role="listitem">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          </a>
+          <a href="#" class="soc" aria-label="TikTok" role="listitem">
+            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.71a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <p class="foot-h">Navegação</p>
+        <nav aria-label="Links do rodapé">
+          <ul class="foot-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <p class="foot-h">Contato</p>
+        <ul class="foot-links">
+          <li><a href="https://wa.me/5511981454342">📱 (11) 98145-4342</a></li>
+          <li><span>📍 Guarulhos · SP</span></li>
+          <li><span>🕐 Seg–Sex 8h–18h · Sáb 8h–13h</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>© 2026 <span>Dra. Taynara Fernandes</span> · Todos os direitos reservados</p>
+      <p>CRO-SP · Guarulhos, SP</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── FLOATING WHATSAPP ─────────────────────────────────────────────────── -->
+<div class="wa-float" id="waf">
+  <div class="wa-bubble" id="wab">Olá! Vamos conversar? 😊</div>
+  <a href="https://wa.me/5511981454342" class="wa-btn" aria-label="WhatsApp" target="_blank" rel="noopener">
+    <div class="wa-ping" aria-hidden="true"></div>
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.528 5.845L0 24l6.335-1.508A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.007-1.375l-.36-.213-3.76.895.952-3.664-.234-.376A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+  </a>
+</div>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in') })
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' })
+  document.querySelectorAll('.fade-up,.fade-left,.fade-right').forEach(el => io.observe(el))
+
+  // Nav
+  const nav = document.getElementById('nav')
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50), { passive: true })
+
+  // Mobile menu
+  const ham = document.getElementById('ham'), mob = document.getElementById('mob')
+  const close = document.getElementById('mob-close')
+  const openMob  = () => { mob.classList.add('open'); ham.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden' }
+  const closeMob = () => { mob.classList.remove('open'); ham.setAttribute('aria-expanded','false'); document.body.style.overflow='' }
+  ham.addEventListener('click', openMob)
+  close.addEventListener('click', closeMob)
+  document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', closeMob))
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'))
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }) }
+    })
+  })
+
+  // WA bubble
+  const wab = document.getElementById('wab')
+  let shown = false
+  const showBubble = () => { if (!shown) { wab.classList.add('show'); shown = true; setTimeout(() => wab.classList.remove('show'), 6000) } }
+  setTimeout(showBubble, 4000)
+  window.addEventListener('scroll', () => { if (scrollY > 400) showBubble() }, { passive: true, once: true })
+
+  // Active nav
+  const secs = document.querySelectorAll('section[id]')
+  const nls  = document.querySelectorAll('.nav-links a')
+  secs.forEach(s => new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) nls.forEach(l => {
+        l.style.color = l.getAttribute('href') === `#${e.target.id}` ? 'var(--gold)' : ''
+      })
+    })
+  }, { threshold: .45 }).observe(s))
+</script>
+</body>
+</html>
