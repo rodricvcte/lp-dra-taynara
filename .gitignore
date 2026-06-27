@@ -4,3 +4,6 @@ Instagram_files/
 Instagram7_files/*.download
 Instagram7_files/*.css
 Instagram7_files/*.js
+
+.vercel
+.env*
